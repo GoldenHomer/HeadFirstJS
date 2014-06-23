@@ -1,6 +1,6 @@
-var location1 = 3;
-var location2 = 4;
-var location3 = 5;
+var location1 = Math.floor(Math.random() * 5);
+var location2 = location1 + 1;
+var location3 = location2 + 1;
 
 var guess;
 var hits = 0;
@@ -8,7 +8,7 @@ var guesses = 0;
 
 var isSunk = false;
 
-while (isSunk == false){
+while (isSunk){
 	
 	guess = prompt("Enter a number (0-6)");
 
@@ -20,6 +20,7 @@ while (isSunk == false){
 		guess += 1;
 
 		if ( guess == location1 || guess == location2 || guess == location3){
+
 		alert("HIT");
 		hits += 1;
 
