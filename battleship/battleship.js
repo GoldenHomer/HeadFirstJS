@@ -17,16 +17,16 @@ while (isSunk == false){
 	}
 
 	else {
-		guess += 1
+		guess += 1;
 
 		if ( guess == location1 || guess == location2 || guess == location3){
 		hits += 1;
 
 			if (hits == 3){
-				isSunk = true
+				isSunk = true;
 				alert("You sank my battleship!");
 			}
 		}
 	}
-	return
+	var stats = "You took "+ guesses +" guesses to sink the battleship, which means your shooting accuracy was "+ (3/guesses);
 }
