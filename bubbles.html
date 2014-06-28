@@ -42,10 +42,12 @@
 			for(var i = 0; i < scores.length; i++){
 				if(bestSolutions[score[i]] == ){
 					if(cost > costs){
-						index = 
+						index = i;
+						cost = scores[i];
 					}
 				}
 			}
+			return index;
 		}
 	</script>
 </head>
