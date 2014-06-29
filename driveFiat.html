@@ -17,7 +17,12 @@ var fiat = {
 	fuel: 0,
 	
 	start: function(){
+		if(this.fuel == 0){
+			alert("Car needs gas.")
+		}
+		else {
 		this.started = true;
+		}
 	},
 
 	stop: function(){
