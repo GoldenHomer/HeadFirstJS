@@ -1,4 +1,4 @@
-var model = {
+var model = {ç
 	boardsize: 7,
 	numShips: 3,
 	shipLength: 3,
@@ -15,12 +15,12 @@ var model = {
 			var ship = this.ships[i];
 			var index = ship.locations.indexOf(guess);
 
-			// here's an improvement! Check to see if the ship
-			// has already been hit, message the user, and return true.
+			// Check to see if the ship has already been hit, message the user, and return true.
 			if (ship.hits[index] === "hit") {
 				view.displayMessage("Oops, you already hit that location!");
 				return true;
-			} else if (index >= 0) {
+			} 
+			else if (index >= 0) {
 				ship.hits[index] = "hit";
 				view.displayHit(guess);
 				view.displayMessage("HIT!");
@@ -57,7 +57,36 @@ generateShipLocations: function(){
 		this.ships[i].locations = locations;
 	}
 	console.log("Ships array " + this.ships);
-}
+},
+
+generateShip: function() {
+		var direction = Math.floor(Math.random() * 2);
+		var row, col;
+
+		if (direction === 1) { 
+			// horizontal direct
+			row = Math.floor(Math.random() * this.boardSize);
+			col = Math.floor(Math.random() * (this.boardSize - this.shipLength));
+		} 
+
+		else { 
+			// vertical direction
+			row = Math.floor(Math.random() * (this.boardSize - this.shipLength));
+			col = Math.floor(Math.random() * this.boardSize);
+		}
+
+		var newShipLocations = [];
+		for (var i = 0; i < this.shipLength; i++) {
+			if (direction === 1) {
+				newShipLocations.push(row + "" + (col + i));
+			} 
+
+			else {
+				newShipLocations.push((row + i) + "" + col);
+			}
+		}
+		return newShipLocations;
+	},
 
 var view = {
 	displaymessage: function(msg) {
