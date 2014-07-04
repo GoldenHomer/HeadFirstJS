@@ -88,6 +88,19 @@ generateShip: function() {
 		return newShipLocations;
 	},
 
+	collision: function(locations) {
+		for (var i = 0; i < this.numShips; i++) {
+			var ship = this.ships[i];
+			for (var j = 0; j < locations.length; j++) {
+				if (ship.locations.indexOf(locations[j]) >= 0) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+};
+
 var view = {
 	displaymessage: function(msg) {
 		var messageArea = document.getElementById("messageArea");
