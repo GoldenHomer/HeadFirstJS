@@ -156,3 +156,14 @@ function parseGuess(guess) {
 	}
 	return null;
 };
+
+// event handlers
+
+function handleFireButton() {
+	var guessInput = document.getElementById("guessInput");
+	var guess = guessInput.value.toUpperCase();
+
+	controller.processGuess(guess);
+
+	guessInput.value = "";
+}
