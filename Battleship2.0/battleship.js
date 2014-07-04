@@ -166,4 +166,12 @@ function handleFireButton() {
 	controller.processGuess(guess);
 
 	guessInput.value = "";
-}
+};
+
+function handleKeyPress(e) {
+	var fireButton = document.getElementById("fireButton");
+	if (e.keyCode === 13) {
+		fireButton.click();
+		return false;
+	}
+};
