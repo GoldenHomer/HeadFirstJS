@@ -48,6 +48,17 @@ isSunk: function(ship) {
 	    return true;
 	},
 
+generateShipLocations: function(){
+	var locations;
+	for (var i = 0; i < this.numShips; i++) {
+		while (this.collision(locations)){
+			locations = this.generateShip();
+		}
+		this.ships[i].locations = locations;
+	}
+	console.log("Ships array " + this.ships);
+}
+
 var view = {
 	displaymessage: function(msg) {
 		var messageArea = document.getElementById("messageArea");
