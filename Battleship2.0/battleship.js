@@ -32,7 +32,7 @@ var model = {
 				return true;
 			}
 		}
-	},
+	}
 
 	view.displayMiss(guess);
 	view.displaymessage("You miss");
