@@ -131,7 +131,7 @@ var controller = {
 			}
 		}
 	}
-};
+}
 
 // helper function to parse a guess from the user
 
@@ -155,7 +155,7 @@ function parseGuess(guess) {
 		}
 	}
 	return null;
-};
+}
 
 // event handlers
 
@@ -166,7 +166,7 @@ function handleFireButton() {
 	controller.processGuess(guess);
 
 	guessInput.value = "";
-};
+}
 
 function handleKeyPress(e) {
 	var fireButton = document.getElementById("fireButton");
@@ -175,7 +175,7 @@ function handleKeyPress(e) {
 		fireButton.click();
 		return false;
 	}
-};
+}
 
 // init - called when the page has completed loading
 
@@ -192,4 +192,4 @@ function init() {
 
 	// place the ships on the game board
 	model.generateShipLocations();
-};
+}
