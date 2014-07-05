@@ -1,4 +1,4 @@
-var model = {ç
+var model = {
 	boardsize: 7,
 	numShips: 3,
 	shipLength: 3,
@@ -170,6 +170,7 @@ function handleFireButton() {
 
 function handleKeyPress(e) {
 	var fireButton = document.getElementById("fireButton");
+	e = e || window.event;
 	if (e.keyCode === 13) {
 		fireButton.click();
 		return false;
