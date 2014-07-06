@@ -51,9 +51,9 @@ isSunk: function(ship) {
 generateShipLocations: function(){
 	var locations;
 	for (var i = 0; i < this.numShips; i++) {
-		while (this.collision(locations)){
+		do { 
 			locations = this.generateShip();
-		}
+		} while (this.collision(locations));
 		this.ships[i].locations = locations;
 	}
 	console.log("Ships array " + this.ships);
