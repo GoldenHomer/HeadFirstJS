@@ -9,8 +9,8 @@ var fly = function(num) {
 function quack(num){
 	for (var i = 0; i < num.length; i++) {
 		console.log("Quack!");
-	};
-}
+	}
+};
 
 if (migrating) {
 	quack(4);
