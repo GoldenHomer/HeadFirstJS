@@ -18,11 +18,27 @@
         function compareSold(colaA, colaB) {
 			if (colaA.sold > colaB.sold) {
 				return 1;
-			} else if (colaA.sold === colaB.sold) {
+			} 
+
+			else if (colaA.sold === colaB.sold) {
 				return 0;
-			} else {
+			} 
+
+			else {
 				return -1;
 			}
 		}
+
+		function printProducts(products) {
+			for (var i = 0; i < products.length; i++) {
+				console.log("Name: " + products[i].name +
+				", Calories: " + products[i].calories +
+				", Color: " + products[i].color +
+				", Sold: " + products[i].sold);
+			}
+		}
+
+		products.sort(compareSold);
+		printProducts(products);
 	</script>
 </body>
