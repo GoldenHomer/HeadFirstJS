@@ -7,3 +7,8 @@ function makeCounter () {
 	}
 	return counter;
 }
+var doCount = makeCounter();
+
+document.write(doCount());
+document.write(doCount());
+document.write(doCount());
