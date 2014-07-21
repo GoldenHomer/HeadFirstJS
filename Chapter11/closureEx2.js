@@ -9,3 +9,11 @@ function multN (n) {
 		return n*m;
 	}
 }
+
+function makeCounter(){
+	var count = 0;
+	var obj = {increment: function (){
+		return counter++;}
+	}
+	return obj;
+}
