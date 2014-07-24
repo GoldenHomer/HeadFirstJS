@@ -19,6 +19,6 @@ var spot = new Dog("Spot". "Chihuahua", 10);
 
 var dogs = [fido, fluffy, spot];
 
-for(var i = 0l i < dogs.length; i++){
+for(var i = 0; i < dogs.length; i++){
 	dogs[i].bark();
 }
