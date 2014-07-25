@@ -1,4 +1,4 @@
-function car (make, model, year, color, passengers, convertible, mileage) {
+function Car (make, model, year, color, passengers, convertible, mileage) {
 	this.make = make;
 	this.model = model;
 	this.year = year;
@@ -28,4 +28,25 @@ var cadiParams = { make: "GM",
 					mileage: 12892
 };
 
-vr
+var cadi = new Car(cadiParams);
+
+function Car (params) {
+	this.make = params.make;
+	this.model = params.model;
+	this.year = params.year;
+	this.color = params.color;
+	this.passengers = params.passengers;
+	this.convertible = params.convertible;
+	this.mileage = params.mileage;
+	this.started = false;
+
+	this.start = function () {
+		this.started = true;
+	}
+	this.stop = function () {
+		this.started = false;
+	}
+	this.drive = function () {
+		this.started ? document.write("Vroom Vroom!") : document.write("Start the engine first!");
+	}
+}
