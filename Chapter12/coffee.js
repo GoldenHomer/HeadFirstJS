@@ -21,3 +21,9 @@ function Coffee (roast, ounces) {
 		document.write("You've ordered a " + getSize + this.roast + " coffee.");
 	}
 }
+
+var houseBlend = new Coffee("House Blend", 12);
+console.log(houseBlend.toString());
+
+var darkRoast = new Coffee("Dark Roast", 16);
+console.log(darkRoast.toString());
