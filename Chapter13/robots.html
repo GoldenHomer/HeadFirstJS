@@ -22,6 +22,36 @@
 	Robot.prototype.blinkLights = function(){
 		document.write("Blinking the lights");
 	}
+
+	function SpaceRobot(name, year, owner, homePlanet) {
+		this.name = name;
+		this.year = year;
+		this.owner = owner;
+		this.homePlanet = homePlanet;
+	}
+
+	SpaceRobot.prototype = new Robot();
+
+	SpaceRobot.speak = function() {
+		alert(this.name + " says 'Sir, If I may venture an opinion...'");
+	}
+
+	SpaceRobot.pilot = function() {
+		alert(this.name + " says: 'Thrusters? Are they important?'");
+	}
+
+	var c3p0 = new SpaceRobot("C3P0", 1977, "Luke Skywalker", "Tatooine");
+
+	c3p0.speak();
+	c3p0.pilot();
+	console.log(c3p0.name + " was made by " + c3p0.maker);
+
+	var simon = new SpaceRobot("Simon", 2009, "Carla Diane","Earth");
+
+	simon.makeCoffee();
+	simon.blinkLights();
+	simon.speak();
+
 	</script>
 </body>
 </html>
