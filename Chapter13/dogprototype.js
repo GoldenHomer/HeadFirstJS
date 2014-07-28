@@ -73,3 +73,9 @@ scotty.bark();
 console.log(scotty.league);
 console.log(scotty.species);
 
+//ShowDog instances do not have their construtor property set correctly
+//This property will show that, for example, scotty was created by the Dog constructor (when we clearly see that it was not).
+//Here's how that is fixed (for best practice)
+
+ShowDog.prototype.constructor = ShowDog;
+
