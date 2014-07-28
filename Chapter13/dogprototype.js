@@ -37,9 +37,8 @@ spot.wag();
 //Now, let's create another constructor called ShowDog to inherit from the Dog prototype
 
 function ShowDog(name, breed, weight, handler){
-	this.name = name;
-	this.breed = breed;
-	this.weight = weight;
+//DRY: The Dog.call below will reuse the Dog constructor code.
+	Dog.call(this, name, breed, weight);
 	this.handler = handler;
 }
 
