@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<body>
+	<script>
+	function Robot(name, year, owner){
+		this.name = name;
+		this.year = year;
+		this.owner = owner;
+	}
+
+	Robot.prototype.maker = function (){
+		document.write("Make!");
+	} 
+	Robot.prototype.speak = function(){
+		document.write("Generic robot sound");
+	}
+	Robot.prototype.makeCoffee = function(){
+		document.write("Making coffee sir");
+	}
+	Robot.prototype.blinkLights = function(){
+		document.write("Blinking the lights");
+	}
+	</script>
+</body>
+</html>
